@@ -3,15 +3,15 @@ name: CI
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
   workflow_dispatch:
 
 env:
   POSTGRESQL_VERSION: 13.1
-  POSTGRESQL_DB: amigoscode
-  POSTGRESQL_USER: postgres
-  POSTGRESQL_PASSWORD: password
+  POSTGRESQL_DB: Springbootreactfullstack
+  POSTGRESQL_USER: nguyenthomast
+  POSTGRESQL_PASSWORD: GorillaXylo1!
   JAVA_VERSION: 1.15
 
 jobs:
