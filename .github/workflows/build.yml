@@ -10,8 +10,8 @@ on:
 env:
   POSTGRESQL_VERSION: 13.1
   POSTGRESQL_DB: springreactfull
-  POSTGRESQL_USER: postgres
-  POSTGRESQL_PASSWORD: Firetruck1!
+  POSTGRESQL_USER: nguyenthomast
+  POSTGRESQL_PASSWORD: GorillaXylo1!
   JAVA_VERSION: 1.15
 
 jobs:
