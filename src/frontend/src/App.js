@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {deleteStudent, getAllStudents} from "./client";
 import {
-    Layout, Menu, Breadcrumb, Table, Spin, Empty, Button, Tag, Badge, Avatar, Popconfirm, Radio
+    Layout, Menu, Breadcrumb, Table, Spin, Empty, Button, Tag, Badge, Avatar, Popconfirm, Radio, Divider
 } from 'antd';
 import {errorNotification, successNotification} from "./Notification";
 import {
@@ -205,7 +205,11 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
-            <Footer style={{textAlign: 'center'}}>Thomas Nguyen</Footer>
+            <Footer style={{textAlign: 'center'}}>Thomas Nguyen
+            <Divider>
+                <a target="_blank" href={"www.google.com.au/"}>Test Link</a>
+            </Divider>
+            </Footer>
         </Layout>
     </Layout>
 }
