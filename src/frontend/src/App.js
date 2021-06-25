@@ -181,9 +181,9 @@ function App() {
                     Option 2
                 </Menu.Item>
                 <SubMenu key="sub1" icon={<UserOutlined/>} title="User">
-                    <Menu.Item key="3">Tom</Menu.Item>
-                    <Menu.Item key="4">Bill</Menu.Item>
-                    <Menu.Item key="5">Alex</Menu.Item>
+                    <Menu.Item key="3">User1</Menu.Item>
+                    <Menu.Item key="4">User2</Menu.Item>
+                    <Menu.Item key="5">User3</Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" icon={<TeamOutlined/>} title="Team">
                     <Menu.Item key="6">Team 1</Menu.Item>
@@ -207,7 +207,7 @@ function App() {
             </Content>
             <Footer style={{textAlign: 'center'}}>Thomas Nguyen
             <Divider>
-                <a target="_blank" href={"www.google.com.au/"}>Test Link</a>
+                <a rel="noopener noreferrer" target="_blank" href={"www.google.com.au/"}>Test Link</a>
             </Divider>
             </Footer>
         </Layout>
