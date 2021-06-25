@@ -207,7 +207,7 @@ function App() {
             </Content>
             <Footer style={{textAlign: 'center'}}>Thomas Nguyen
             <Divider>
-                <a rel="noopener noreferrer" target="_blank" href={"www.youtube.com.au/"}>Test Link</a>
+                <a rel="noopener noreferrer" target="_blank" href={"www.reddit.com/"}>Test Link</a>
             </Divider>
             </Footer>
         </Layout>
