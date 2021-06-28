@@ -83,6 +83,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add elasticbeanstalk/docker-compose.yml
+          git add mvnw
           git commit -m "new app version: ${BUILD_NUMBER}"
           git push
 
