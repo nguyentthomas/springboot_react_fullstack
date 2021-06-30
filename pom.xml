@@ -83,8 +83,8 @@
 			</configuration>
 		</plugin>
 	</plugins>
-</build>
-<profiles>
+	</build>
+	<profiles>
 		<profile>
 			<id>jib-push-to-dockerhub</id>
 			<activation>
@@ -200,7 +200,7 @@
 						<groupId>com.github.eirslett</groupId>
 						<artifactId>frontend-maven-plugin</artifactId>
 						<!-- Use the latest released version:
-                        https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
+						https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
 						<version>1.11.2</version>
 						<configuration>
 							<nodeVersion>v4.6.0</nodeVersion>
