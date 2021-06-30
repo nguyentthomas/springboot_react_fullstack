@@ -1,3 +1,6 @@
+//To rebuild: --mvnw clean install jib:build -Djib.to.image=awd5dvrgbqq6/spring-react-fullstack:latest -D jib.to.auth.username=awd5dvrgbqq6 -Djib
+// .to.auth.password=password
+
 import {useState, useEffect} from 'react'
 import {deleteStudent, getAllStudents} from "./client";
 import {
@@ -22,26 +25,29 @@ const {SubMenu} = Menu;
 
 const TheAvatar = ({name}) => {
     let trim = name.trim();
-    if (name.trim().length === 0) {
-        return <Avatar icon={UserOutlined}/>
+    if (trim.length === 0) {
+        return <Avatar icon={<UserOutlined/>}/>
     }
     const split = trim.split(" ");
-    if (split.length === 1){
+    if (split.length === 1) {
         return <Avatar>{name.charAt(0)}</Avatar>
     }
-    return <Avatar>{name.charAt(0)}{name.charAt(name.length-1)}</Avatar>
+    return <Avatar>
+        {`${name.charAt(0)}${name.charAt(name.length - 1)}`}
+    </Avatar>
 }
-
-
 
 const removeStudent = (studentId, callback) => {
     deleteStudent(studentId).then(() => {
-        successNotification( "Student deleted successfully", `Student (ID: ${studentId}) was deleted successfully.`);
+        successNotification("Student deleted", `Student with ${studentId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {
             console.log(res);
-            errorNotification("Uh oh! An error occurred.", `${res.message}[${res.status} - ${res.error}]`);
+            errorNotification(
+                "There was an issue",
+                `${res.message} [${res.status}] [${res.error}]`
+            )
         });
     })
 }
@@ -88,7 +94,6 @@ const columns = fetchStudents => [
                 </Popconfirm>
                 <Button value="small">Edit</Button>
     </Radio.Group>
-
     },
 ];
 
@@ -199,7 +204,7 @@ function App() {
             <Content style={{margin: '0 16px'}}>
                 <Breadcrumb style={{margin: '16px 0'}}>
                     <Breadcrumb.Item>User</Breadcrumb.Item>
-                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                    <Breadcrumb.Item>User1</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="site-layout-background" style={{padding: 24, minHeight: 360}}>
                     {renderStudents()}
