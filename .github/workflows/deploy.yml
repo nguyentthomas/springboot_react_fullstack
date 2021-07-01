@@ -1,4 +1,4 @@
-name: CICD/deploy
+name: CICD
 
 on:
   push:
