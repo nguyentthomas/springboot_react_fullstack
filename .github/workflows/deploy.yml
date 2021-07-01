@@ -80,6 +80,9 @@ jobs:
                     echo -e "Current elasticbeanstalk/docker-compose.yml\n$(cat elasticbeanstalk/docker-compose.yml)"
                     sed -i -E 's_(nguyenthomast/springboot-react-fullstack:)([^"]*)_\1'${BUILD_NUMBER}'_' elasticbeanstalk/docker-compose.yml
                     echo -e "Current elasticbeanstalk/docker-compose.yml\n$(cat elasticbeanstalk/docker-compose.yml)"
+                    git checkout master
+                    git reset --hard test
+                    git push --force origin master
                     git config user.name github-actions
                     git config user.email github-actions@github.com
                     git add .
